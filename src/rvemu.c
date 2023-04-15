@@ -6,6 +6,6 @@ int main(int argc, char* argv[]) {
     machine_t machine = {0};
     machine_load_program(&machine, argv[1]);
 
-    printf("entry: %lx\n", machine.mmu_entry);
+    printf("entry: %llx\n", TO_HOST(machine.mmu_entry));
     return 0;
 }
