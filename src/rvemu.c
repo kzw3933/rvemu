@@ -6,6 +6,9 @@ int main(int argc, char* argv[]) {
     machine_t machine = {0};
     machine_load_program(&machine, argv[1]);
 
-    printf("entry: %llx\n", TO_HOST(machine.mmu_entry));
+    while(true) {
+        enum exit_reason_t reason = machine_step(machine);
+        assert(reason == ecall);
+    }
     return 0;
 }
