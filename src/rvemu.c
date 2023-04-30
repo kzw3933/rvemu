@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
     machine_load_program(&machine, argv[1]);
 
     while(true) {
-        enum exit_reason_t reason = machine_step(machine);
+        enum exit_reason_t reason = machine_step(&machine);
         assert(reason == ecall);
     }
     return 0;

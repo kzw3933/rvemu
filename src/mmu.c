@@ -10,9 +10,9 @@ static void load_phdr(elf64_phdr_t *phdr, elf64_ehdr_t *ehdr, i64 i, FILE *file)
 }
 
 static int flags_to_mmap_prot(u32 flags) {
-    return (flags & PF_R ? PORT_READ : 0) |
-            (flags & PF_W ? PORT_WRITE : 0) |
-            (flags & PF_X ? PORT_EXEC : 0);
+    return (flags & PF_R ? PROT_READ : 0) |
+            (flags & PF_W ? PROT_WRITE : 0) |
+            (flags & PF_X ? PROT_EXEC : 0);
 }
 
 static void mmu_load_segment(mmu_t *mmu, elf64_phdr_t *phdr, int fd) {
@@ -30,9 +30,9 @@ static void mmu_load_segment(mmu_t *mmu, elf64_phdr_t *phdr, int fd) {
 
     u64 remaining_bss = ROUNDUP(memsz, page_size) - ROUNDUP(filesz, page_size);
     if(remaining_bss > 0) {
-        u64 addr = (u64) mmap((void*)(aligned_vaddr + ROUNDUP(filesz, page_size), remaining_bss, 
-                        port, MAP_ANONYMOUS | MAP_PRIVATE | MAP_FIXED, -1, 0));
-        assert(addr = aligned_vaddr + ROUNDUP(filesz, page_size));
+        u64 addr = (u64) mmap((void*)(aligned_vaddr + ROUNDUP(filesz, page_size)), remaining_bss, 
+                        prot, MAP_ANONYMOUS | MAP_PRIVATE | MAP_FIXED, -1, 0);
+        assert(addr == aligned_vaddr + ROUNDUP(filesz, page_size));
     }
 
     mmu->host_alloc = MAX(mmu->host_alloc, (aligned_vaddr + ROUNDUP(memsz, page_size)));
