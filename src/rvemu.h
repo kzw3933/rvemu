@@ -67,7 +67,9 @@ typedef struct {
     i8 rd;
     i8 rs1;
     i8 rs2;
+    i8 rs3;
     i32 imm;
+    i16 csr;
     enum insn_type_t type;
     bool rvc;
     bool cont;
