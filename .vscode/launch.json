@@ -25,7 +25,8 @@
                 }
             ],
             "preLaunchTask": "build",  //与tasks.json 的label项目同名
-            "miDebuggerPath": "/usr/bin/gdb"
+            "miDebuggerPath": "/usr/bin/gdb",
+            // "coreDumpPath": "/home/jack/Desktop/rvemu/core.rvemu.11234.jack-Lenovo-Legion-R7000-2020.1684722439"
         }
     ]
 }

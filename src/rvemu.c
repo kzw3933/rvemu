@@ -1,5 +1,12 @@
 #include "rvemu.h"
 
+void getmaps(void) {
+    printf("pid is %d\n", getpid());
+    char cmd[50] = {};
+    sprintf(cmd, "rm -rf ./maps && cp /proc/%d/maps ./maps",getpid());
+    system(cmd);
+}
+
 int main(int argc, char* argv[]) {
     assert(argc > 1);
 
@@ -7,6 +14,7 @@ int main(int argc, char* argv[]) {
     machine_load_program(&machine, argv[1]);
     machine_setup(&machine, argc, argv);
 
+    getmaps();
     // a7 syscall number
     // a0-a6 args
     while(true) {

@@ -1,0 +1,32 @@
+00400000-00401000 r--p 00000000 103:06 14193337                          /home/jack/Desktop/rvemu/rvemu
+00401000-00406000 r-xp 00001000 103:06 14193337                          /home/jack/Desktop/rvemu/rvemu
+00406000-0040a000 r--p 00006000 103:06 14193337                          /home/jack/Desktop/rvemu/rvemu
+0040a000-0040b000 r--p 00009000 103:06 14193337                          /home/jack/Desktop/rvemu/rvemu
+0040b000-0040c000 rw-p 0000a000 103:06 14193337                          /home/jack/Desktop/rvemu/rvemu
+00980000-009a1000 rw-p 00000000 00:00 0                                  [heap]
+88800010000-8880001e000 r-xp 00000000 103:06 14698012                    /home/jack/Desktop/rvemu/tests/hello
+8880001e000-88800020000 rw-p 0000d000 103:06 14698012                    /home/jack/Desktop/rvemu/tests/hello
+88800020000-88802021000 rw-p 00000000 00:00 0 
+7f45337ae000-7f45337b1000 rw-p 00000000 00:00 0 
+7f45337b1000-7f45337d3000 r--p 00000000 103:06 923821                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f45337d3000-7f453394b000 r-xp 00022000 103:06 923821                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f453394b000-7f4533999000 r--p 0019a000 103:06 923821                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f4533999000-7f453399d000 r--p 001e7000 103:06 923821                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f453399d000-7f453399f000 rw-p 001eb000 103:06 923821                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f453399f000-7f45339a3000 rw-p 00000000 00:00 0 
+7f45339a3000-7f45339b0000 r--p 00000000 103:06 924479                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f45339b0000-7f4533a57000 r-xp 0000d000 103:06 924479                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f4533a57000-7f4533af0000 r--p 000b4000 103:06 924479                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f4533af0000-7f4533af1000 r--p 0014c000 103:06 924479                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f4533af1000-7f4533af2000 rw-p 0014d000 103:06 924479                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f4533af2000-7f4533af4000 rw-p 00000000 00:00 0 
+7f4533b0a000-7f4533b0b000 r--p 00000000 103:06 923601                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f4533b0b000-7f4533b2e000 r-xp 00001000 103:06 923601                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f4533b2e000-7f4533b36000 r--p 00024000 103:06 923601                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f4533b37000-7f4533b38000 r--p 0002c000 103:06 923601                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f4533b38000-7f4533b39000 rw-p 0002d000 103:06 923601                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f4533b39000-7f4533b3a000 rw-p 00000000 00:00 0 
+7ffef61dc000-7ffef61fe000 rw-p 00000000 00:00 0                          [stack]
+7ffef62f8000-7ffef62fc000 r--p 00000000 00:00 0                          [vvar]
+7ffef62fc000-7ffef62fe000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
